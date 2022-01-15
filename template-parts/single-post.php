@@ -74,7 +74,7 @@
                         ?>
                     </div>
                     <h5><a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID', $author_id)) ); ?>"
-                            title="<?php echo esc_attr( the_author_meta( 'display_name', $author_id) ); ?>"><?php the_author_meta('display_name' , $author_id); ?></a>
+                            title="<?php echo esc_attr(the_author_meta('display_name', $author_id)); ?>"><?php the_author_meta('display_name' , $author_id); ?></a>
                     </h5>
                     <p><?php the_author_meta('description' , $author_id); ?></p>
                 </div>
