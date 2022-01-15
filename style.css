@@ -1041,11 +1041,14 @@ header.sticky-header.sticky-on {
 
 .post-area {
   position: relative;
-  margin-top: 80px;
+  margin-top: 40px;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
 }
 
+.post-area.with-sidebar {
+  margin-top: 80px;
+}
 .post-area.with-sidebar .post-area-inner {
   display: -ms-grid;
   display: grid;
@@ -1066,7 +1069,12 @@ header.sticky-header.sticky-on {
     display: block;
   }
 }
-
+h4.page-title {
+  font-weight: 400;
+}
+h4.page-title span {
+  font-weight: 700;
+}
 .entry-posts {
   padding-top: 70px;
   padding-bottom: 100px;
