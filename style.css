@@ -236,8 +236,8 @@ a:hover {
 }
 
 .line-one {
-  margin-top: 90px;
-  margin-bottom: 90px;
+  margin-top: 45px;
+  margin-bottom: 45px;
   height: 1px;
   width: 100%;
   background-color: #e5e5e5;
@@ -1047,7 +1047,7 @@ header.sticky-header.sticky-on {
 }
 
 .post-area.with-sidebar {
-  margin-top: 80px;
+  margin-top: 40px;
 }
 .post-area.with-sidebar .post-area-inner {
   display: -ms-grid;

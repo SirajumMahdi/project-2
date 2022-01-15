@@ -22,7 +22,7 @@
             </h4>
             <ul class="post-meta">
                 <li class="date">
-                    <a href="#"><?php the_date() ?></a>
+                    <a href="#"><?php the_date('d-m-Y') ?></a>
                 </li>
                 <li class="categories">
                     <?php

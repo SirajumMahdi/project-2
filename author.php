@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying Author archive pages
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -18,16 +18,16 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="post-area with-sidebar">
+    <section class="post-area no-sidebar">
         <div class="container-fluid">
             <div class="post-area-inner">
                 <!-- Search Result Post -->
-                <div class="entry-posts clearfix masonary-posts row">
+                <div class="entry-posts two-column masonary-posts row">
                     <?php
                         while(have_posts()):
                             the_post()
                     ?>
-                    <div class="col-xl-4 col-sm-6">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
                         <?php get_template_part('template-parts/content'); ?>
                     </div>
                     <?php
