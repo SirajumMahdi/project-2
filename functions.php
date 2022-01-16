@@ -51,6 +51,7 @@ if ( ! function_exists( 'tukitwo_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'tukitwo' ),
+				'menu-2' => esc_html__( 'Category', 'tukitwo' ),
 			)
 		);
 
@@ -127,10 +128,10 @@ add_action( 'after_setup_theme', 'tukitwo_content_width', 0 );
 function tukitwo_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar-1', 'tukitwo' ),
-			'id'            => 'sidebar-1',
+			'name'          => esc_html__( 'Footer-1', 'tukitwo' ),
+			'id'            => 'footer-1',
 			'description'   => esc_html__( 'Add widgets here.', 'tukitwo' ),
-			'before_widget' => '<div id="%1$s" class="widget %2$s trending-posts">',
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h5 class="widget-title">',
 			'after_title'   => '</h5>',
@@ -223,6 +224,7 @@ require get_template_directory() . '/inc/tuki-comments.php';
  * Plugin-installer.
  */
 require get_template_directory() . '/inc/Plugin-installer.php';
+
 
 /**
  * Load Jetpack compatibility file.

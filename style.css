@@ -1314,23 +1314,23 @@ h4.page-title span {
 }
 
 .primary-sidebar .widget.categories-widget .categories {
-  display: -ms-grid;
+  /* display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 20px; */
 }
 
 .primary-sidebar .widget.categories-widget .categories .categorie {
   width: 100%;
-  height: 120px;
+  /* height: 120px; */
   position: relative;
   z-index: 1;
   background-size: cover;
   background-position: center;
 }
 
-.primary-sidebar .widget.categories-widget .categories .categorie::before {
+/* .primary-sidebar .widget.categories-widget .categories .categorie::before {
   position: absolute;
   left: 0;
   top: 0;
@@ -1342,15 +1342,15 @@ h4.page-title span {
   background-image: url(../img/sidebar/overly.png);
   background-size: cover;
   background-position: center;
-}
+} */
 
 .primary-sidebar .widget.categories-widget .categories .categorie a {
   font-size: 16px;
   font-weight: 700;
-  color: #fff;
+  color: rgb(0, 0, 0);
   height: 100%;
   width: 100%;
-  display: -webkit-box;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
@@ -1358,7 +1358,7 @@ h4.page-title span {
   align-items: flex-end;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: center; */
   padding: 20px 10px;
 }
 
@@ -1998,7 +1998,8 @@ h4.page-title span {
   margin-bottom: 60px;
 }
 
-.comment-template .comment-list li:not(:last-child) {
+.comment-template .comment-list li:not(:last-child),
+ul.children li {
   margin-bottom: 50px;
 }
 
@@ -2022,7 +2023,9 @@ h4.page-title span {
   font-weight: 600;
   margin-bottom: 20px;
 }
-
+.comment-author img {
+  border-radius: 50px;
+}
 .comment-template .comment-list li .comment-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2041,7 +2044,7 @@ h4.page-title span {
   font-size: 14px;
 }
 
-.comment-template .comment-list li .comment-footer .reply-link {
+.comment-template .comment-list li .comment-footer a {
   line-height: 1;
   font-family: "Roboto Slab", serif;
   font-weight: 700;
@@ -2052,12 +2055,14 @@ h4.page-title span {
   font-size: 13px;
 }
 
-.comment-template .comment-list li .comment-footer .reply-link:hover {
+.comment-template .comment-list li .comment-footer a:hover {
   color: #fff;
   border-color: #000;
   background-color: #000;
 }
-
+ul.children li {
+  padding-left: 80px;
+}
 .comment-template .comment-form .row {
   margin-left: -25px;
   margin-right: -25px;
@@ -2069,8 +2074,8 @@ h4.page-title span {
   padding-left: 25px;
 }
 
-.comment-template .comment-form input,
-.comment-template .comment-form textarea {
+.comment-template .comment-respond form input,
+.comment-template .comment-respond form textarea {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #ebebeb;
@@ -2079,36 +2084,36 @@ h4.page-title span {
   margin-bottom: 30px;
 }
 
-.comment-template .comment-form ::-webkit-input-placeholder {
+.comment-template .comment-respond form ::-webkit-input-placeholder {
   font-size: 15px;
   color: #7d7d7d;
 }
 
-.comment-template .comment-form ::-moz-placeholder {
+.comment-template .comment-respond form ::-moz-placeholder {
   font-size: 15px;
   color: #7d7d7d;
 }
 
-.comment-template .comment-form :-ms-input-placeholder {
+.comment-template .comment-respond form :-ms-input-placeholder {
   font-size: 15px;
   color: #7d7d7d;
 }
 
-.comment-template .comment-form ::-ms-input-placeholder {
+.comment-template .comment-respond form ::-ms-input-placeholder {
   font-size: 15px;
   color: #7d7d7d;
 }
 
-.comment-template .comment-form ::placeholder {
+.comment-template .comment-respond form ::placeholder {
   font-size: 15px;
   color: #7d7d7d;
 }
 
-.comment-template .comment-form textarea {
+.comment-template .comment-respond form textarea {
   height: 100px;
 }
 
-.comment-template .comment-form button {
+.comment-template .comment-respond form .form-submit button {
   font-size: 14px;
   font-weight: 500;
   background-color: #2f2f2f;
@@ -2123,12 +2128,12 @@ h4.page-title span {
   transition: all 0.3s ease-out 0s;
 }
 
-.comment-template .comment-form button:hover {
+.comment-template .comment-respond form .form-submit button:hover {
   background-color: #fff;
   color: #000;
 }
 
-.comment-template .comment-form button i {
+.comment-template .comment-respond form .form-submit button i {
   font-size: 12px;
   position: relative;
   top: -1px;

@@ -21,17 +21,17 @@ if ( post_password_required() ) {
 ?>
 
 <!--widget-comments-->
-<div class="post-footer__comment">
+<div class="comment-template">
     <?php
 	// You can start editing here -- including this comment!
 	    if ( have_comments() ) :
 		    $noonpost_comment_count = get_comments_number();
 	    ?>
-    <h3 class="comment-title">
-        <span><?php echo $noonpost_comment_count . ($noonpost_comment_count === '1' ? ' comment' : ' comments');?></span>
-    </h3>
+    <h4 class="template-title">
+        <?php echo $noonpost_comment_count . ($noonpost_comment_count === '1' ? ' comment' : ' comments');?>
+    </h4>
     <?php endif;?>
-    <div class="post-footer__comment__detail">
+    <ul class="comment-list">
         <?php
 		wp_list_comments(
 			array(
@@ -41,7 +41,7 @@ if ( post_password_required() ) {
 			)
 		);
 	?>
-    </div>
+    </ul>
     <?php
 		the_comments_navigation();
 		// If comments are closed and there are comments, let's leave a little note, shall we?
@@ -54,16 +54,17 @@ if ( post_password_required() ) {
     <!--Leave-comments-->
     <?php comment_form(array(
 		'fields' => array(
-			'author' => '<input type="text" placeholder="Name" name="author" id="author"/>',
-			'email' => '<input type="email" placeholder="Email" name="email" id="email"/>',
-			'url' => '<input type="text" placeholder="Webiste" name="url" id="url"/>',
+			'author' => '<input type="text" placeholder="Enter your name" name="author" id="author"/>',
+			'email' => '<input type="email" placeholder="Your Email" name="email" id="email"/>',
             'cookies' => ''
 		),
-		'comment_field' => '<textarea cols="30" rows="5" placeholder="Messages" name="comment" id="comment"></textarea>',
+        'comment_notes_before' => '',
+		'comment_field' => '<textarea cols="30" rows="5" placeholder="Your message here" name="comment" id="comment"></textarea>',
 		'class_form' => 'widget-form',
-		'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="btn-custom %3$s">%4$s</button>',
-		'title_reply' => '<h3 class="comment-title"> <span>Leave a comment</span></h3>',
+		'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="btn-custom %3$s">%4$s <i class="far fa-arrow-right"></i></button>',
+		'title_reply' => '<h4 class="template-title">Leave your comment</h4>',
         'class_submit' => 'btn -normal',
-        'label_submit' => 'Submit'
+        'label_submit' => 'Post ',
+        'logged_in_as' => ''
 	)); ?>
 </div>

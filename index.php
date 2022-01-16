@@ -27,29 +27,9 @@ global $wp_query;
     </section>
     <!--====== Banner Area End ======-->
 
-    <!-- Line One -->
-    <div class="line-one"></div>
 
-    <!--====== Image Boxes Start======-->
-    <section class="image-boxes-area">
-        <div class="container-fluid">
-            <div class="image-boxes">
-                <div class="image-box" style="background-image: url(assets/img/image-box/01.jpg)">
-                    <a href="about.html">About Me</a>
-                </div>
-                <div class="image-box" style="background-image: url(assets/img/image-box/02.jpg)">
-                    <a href="photo-stories.html">Photos Stories</a>
-                </div>
-                <div class="image-box" style="background-image: url(assets/img/image-box/03.jpg)">
-                    <a href="#">Follow @ Instagram</a>
-                </div>
-                <div class="image-box" style="background-image: url(assets/img/image-box/04.jpg)">
-                    <a href="#">Browse Shop</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--====== Image Boxes End ======-->
+
+
 
     <!--====== Post Area Start ======-->
     <section class="post-area with-sidebar">
@@ -88,6 +68,7 @@ global $wp_query;
                         <div class="col-lg-12 col-sm-6 widget author-widget">
                             <div class="author-img">
                                 <img src="assets/img/sidebar/author.jpg" alt="Post-Author" />
+                                <?php //get_avatar() ?>
                             </div>
                             <h5 class="widget-title">I am a Bloger</h5>
                             <p>
@@ -98,19 +79,20 @@ global $wp_query;
                                 <img src="assets/img/sidebar/author-signature.png" alt="Signature" />
                             </div>
                         </div>
+
                         <div class="col-lg-12 col-sm-6 widget categories-widget">
                             <h5 class="widget-title">Categoriesr</h5>
                             <div class="categories">
-                                <div class="categorie" style="background-image: url(assets/img/sidebar/cat/01.jpg)">
+                                <div class="categorie">
                                     <a href="#"> Business </a>
                                 </div>
-                                <div class="categorie" style="background-image: url(assets/img/sidebar/cat/02.jpg)">
+                                <div class="categorie">
                                     <a href="#"> Fashion </a>
                                 </div>
-                                <div class="categorie" style="background-image: url(assets/img/sidebar/cat/03.jpg)">
+                                <div class="categorie">
                                     <a href="#"> Artistic </a>
                                 </div>
-                                <div class="categorie" style="background-image: url(assets/img/sidebar/cat/04.jpg)">
+                                <div class="categorie">
                                     <a href="#"> Media </a>
                                 </div>
                             </div>

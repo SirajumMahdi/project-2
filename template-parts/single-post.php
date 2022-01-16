@@ -87,7 +87,7 @@
                             if(is_a($prevPost, 'WP_Post')):
                     ?>
                     <a href="<?php echo get_permalink($prevPost->ID); ?>"><i class="far fa-angle-left"></i></a><span
-                        class="title">Previous Post</span>
+                        class="title"><?php echo esc_html__( 'Previous Post', 'tukitwo' )?></span>
                     <?php endif;?>
                 </div>
                 <div class="next-post">
@@ -100,106 +100,12 @@
                     <?php endif;?>
                 </div>
             </div>
-
-            <!-- <div class="related-posts">
-                <h4 class="related-title">Related Posts</h4>
-                <div class="related-loop row justify-content-center">
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="related-post-box">
-                            <div class="thumb">
-                                <img src="assets/img/post-details/related-01.jpg" alt="image">
-                            </div>
-                            <h5 class="title">
-                                <a href="#">
-                                    The Olivier da Costa restaurant experience in Lisbon
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-10">
-                        <div class="related-post-box">
-                            <div class="thumb">
-                                <img src="assets/img/post-details/related-02.jpg" alt="image">
-                            </div>
-                            <h5 class="title">
-                                <a href="#">
-                                    The Olivier da Costa restaurant experience in Lisbon
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-            <div class="comment-template">
-                <h4 class="template-title">04 Comments</h4>
-
-                <ul class="comment-list">
-                    <li>
-                        <div class="comment-body">
-                            <div class="comment-author">
-                                <img src="assets/img/post-details/comment-01.jpg" alt="image">
-                            </div>
-                            <div class="comment-content">
-                                <h6 class="comment-author">Zhon Andarson</h6>
-                                <p>
-                                    Coding is used in almost all aspects of life and work now, be it directly or
-                                    indirectly.
-                                    It’s not just for companies in the tech sector. “An increasing number of businesses
-                                    rely
-                                    on computer code,
-                                </p>
-                                <div class="comment-footer">
-                                    <span class="date"> 10:35pm, 27 jan 2015.</span>
-                                    <a href="#" class="reply-link">Reply</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="comment-body">
-                            <div class="comment-author">
-                                <img src="assets/img/post-details/comment-02.jpg" alt="image">
-                            </div>
-                            <div class="comment-content">
-                                <h6 class="comment-author">Andro Smith Doe</h6>
-                                <p>
-                                    Coding is used in almost all aspects of life and work now, be it directly or
-                                    indirectly.
-                                    It’s not just for companies in the tech sector. “An increasing number of businesses
-                                    rely
-                                    on computer code,
-                                </p>
-                                <div class="comment-footer">
-                                    <span class="date"> 10:35pm, 27 jan 2015.</span>
-                                    <a href="#" class="reply-link">Reply</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-
-                <h4 class="template-title">Leave your comment</h4>
-                <div class="comment-form">
-                    <form action="#">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <input type="text" placeholder="Enter your name">
-                            </div>
-                            <div class="col-sm-6">
-                                <input type="email" placeholder="Your Email">
-                            </div>
-                            <div class="col-12">
-                                <textarea placeholder="Your message here"></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit">Post <i class="far fa-arrow-right"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <?php
+			// If comments are open or we have at least one comment, load up the comment template.
+			if (comments_open() || get_comments_number()):
+				comments_template();              
+			endif;
+		?>
         </div>
 </section>
 <!--====== Post Details End ======-->
